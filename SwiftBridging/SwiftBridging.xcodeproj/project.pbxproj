@@ -17,6 +17,7 @@
 		D1E6612C261C64E500FF18F2 /* SwiftBridgingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6612B261C64E500FF18F2 /* SwiftBridgingTests.swift */; };
 		D1E66137261C64E500FF18F2 /* SwiftBridgingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E66136261C64E500FF18F2 /* SwiftBridgingUITests.swift */; };
 		D1E66148261C64FB00FF18F2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D1E66147261C64FB00FF18F2 /* README.md */; };
+		D1E66177261C699300FF18F2 /* testoc.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E66176261C699300FF18F2 /* testoc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,9 @@
 		D1E66136261C64E500FF18F2 /* SwiftBridgingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBridgingUITests.swift; sourceTree = "<group>"; };
 		D1E66138261C64E500FF18F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E66147261C64FB00FF18F2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		D1E66174261C699300FF18F2 /* SwiftBridging-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftBridging-Bridging-Header.h"; sourceTree = "<group>"; };
+		D1E66175261C699300FF18F2 /* testoc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testoc.h; sourceTree = "<group>"; };
+		D1E66176261C699300FF18F2 /* testoc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testoc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 		D1E66113261C64E400FF18F2 /* SwiftBridging */ = {
 			isa = PBXGroup;
 			children = (
+				D1E66173261C693D00FF18F2 /* header */,
 				D1E66147261C64FB00FF18F2 /* README.md */,
 				D1E66114261C64E400FF18F2 /* AppDelegate.swift */,
 				D1E66116261C64E400FF18F2 /* SceneDelegate.swift */,
@@ -146,6 +151,16 @@
 				D1E66138261C64E500FF18F2 /* Info.plist */,
 			);
 			path = SwiftBridgingUITests;
+			sourceTree = "<group>";
+		};
+		D1E66173261C693D00FF18F2 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				D1E66175261C699300FF18F2 /* testoc.h */,
+				D1E66176261C699300FF18F2 /* testoc.m */,
+				D1E66174261C699300FF18F2 /* SwiftBridging-Bridging-Header.h */,
+			);
+			path = header;
 			sourceTree = "<group>";
 		};
 		EE07EBC9F82969F64C9C43BB /* Frameworks */ = {
@@ -224,6 +239,7 @@
 				TargetAttributes = {
 					D1E66110261C64E400FF18F2 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					D1E66126261C64E500FF18F2 = {
 						CreatedOnToolsVersion = 12.2;
@@ -314,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E66119261C64E400FF18F2 /* ViewController.swift in Sources */,
+				D1E66177261C699300FF18F2 /* testoc.m in Sources */,
 				D1E66115261C64E400FF18F2 /* AppDelegate.swift in Sources */,
 				D1E66117261C64E400FF18F2 /* SceneDelegate.swift in Sources */,
 			);
@@ -492,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftBridging/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -501,6 +519,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ds.swift.bridging.SwiftBridging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftBridging/header/SwiftBridging-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -512,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftBridging/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -521,6 +542,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ds.swift.bridging.SwiftBridging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftBridging/header/SwiftBridging-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
