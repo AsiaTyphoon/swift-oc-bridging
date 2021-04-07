@@ -9,4 +9,8 @@
 
 @implementation testoc
 
+- (void)printSelf {
+    NSLog(@"xxxx %@", self);
+}
+
 @end

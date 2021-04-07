@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4C75E6C04EB9D7D33434FF80 /* Pods_oclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C7A1FC45F6398F3C7D8023 /* Pods_oclib.framework */; };
 		D1E6615B261C658600FF18F2 /* oclib.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E66159261C658600FF18F2 /* oclib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1E66253261D564500FF18F2 /* Bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E66251261D564500FF18F2 /* Bridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1E66254261D564500FF18F2 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E66252261D564500FF18F2 /* Bridge.m */; };
+		D1E66257261D565900FF18F2 /* River.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E66256261D565900FF18F2 /* River.swift */; };
+		D1E66271261D5E6200FF18F2 /* BridgePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E6626F261D5E6200FF18F2 /* BridgePrivate.h */; };
+		D1E66272261D5E6200FF18F2 /* BridgePrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E66270261D5E6200FF18F2 /* BridgePrivate.m */; };
+		D1E66276261D5EC500FF18F2 /* publicheader.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E66275261D5EC500FF18F2 /* publicheader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +22,15 @@
 		D1E66156261C658600FF18F2 /* oclib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = oclib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E66159261C658600FF18F2 /* oclib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = oclib.h; sourceTree = "<group>"; };
 		D1E6615A261C658600FF18F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E66251261D564500FF18F2 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		D1E66252261D564500FF18F2 /* Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
+		D1E66256261D565900FF18F2 /* River.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = River.swift; sourceTree = "<group>"; };
+		D1E66264261D5C5200FF18F2 /* public.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = public.modulemap; sourceTree = "<group>"; };
+		D1E6626C261D5D9900FF18F2 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		D1E6626F261D5E6200FF18F2 /* BridgePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgePrivate.h; sourceTree = "<group>"; };
+		D1E66270261D5E6200FF18F2 /* BridgePrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgePrivate.m; sourceTree = "<group>"; };
+		D1E66275261D5EC500FF18F2 /* publicheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = publicheader.h; sourceTree = "<group>"; };
+		D1E6627A261D5F3000FF18F2 /* privateheader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = privateheader.h; sourceTree = "<group>"; };
 		DE61A26403329A76547FCDD4 /* Pods-oclib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oclib.debug.xcconfig"; path = "Target Support Files/Pods-oclib/Pods-oclib.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C7A1FC45F6398F3C7D8023 /* Pods_oclib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oclib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,10 +76,51 @@
 		D1E66158261C658600FF18F2 /* oclib */ = {
 			isa = PBXGroup;
 			children = (
+				D1E66265261D5C5200FF18F2 /* private */,
+				D1E66262261D5C5200FF18F2 /* public */,
+				D1E66249261D561700FF18F2 /* classes */,
+				D1E6624A261D561700FF18F2 /* objective-c */,
 				D1E66159261C658600FF18F2 /* oclib.h */,
 				D1E6615A261C658600FF18F2 /* Info.plist */,
 			);
 			path = oclib;
+			sourceTree = "<group>";
+		};
+		D1E66249261D561700FF18F2 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				D1E66256261D565900FF18F2 /* River.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		D1E6624A261D561700FF18F2 /* objective-c */ = {
+			isa = PBXGroup;
+			children = (
+				D1E66251261D564500FF18F2 /* Bridge.h */,
+				D1E66252261D564500FF18F2 /* Bridge.m */,
+				D1E6626F261D5E6200FF18F2 /* BridgePrivate.h */,
+				D1E66270261D5E6200FF18F2 /* BridgePrivate.m */,
+			);
+			path = "objective-c";
+			sourceTree = "<group>";
+		};
+		D1E66262261D5C5200FF18F2 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				D1E6627A261D5F3000FF18F2 /* privateheader.h */,
+				D1E66275261D5EC500FF18F2 /* publicheader.h */,
+				D1E66264261D5C5200FF18F2 /* public.modulemap */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		D1E66265261D5C5200FF18F2 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				D1E6626C261D5D9900FF18F2 /* module.modulemap */,
+			);
+			path = private;
 			sourceTree = "<group>";
 		};
 		F77E5DF26BF81791D33AE355 /* Pods */ = {
@@ -85,6 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E6615B261C658600FF18F2 /* oclib.h in Headers */,
+				D1E66253261D564500FF18F2 /* Bridge.h in Headers */,
+				D1E66276261D5EC500FF18F2 /* publicheader.h in Headers */,
+				D1E66271261D5E6200FF18F2 /* BridgePrivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +179,7 @@
 				TargetAttributes = {
 					D1E66155261C658600FF18F2 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -181,6 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E66257261D565900FF18F2 /* River.swift in Sources */,
+				D1E66254261D564500FF18F2 /* Bridge.m in Sources */,
+				D1E66272261D5E6200FF18F2 /* BridgePrivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +376,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE61A26403329A76547FCDD4 /* Pods-oclib.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -326,9 +391,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = oclib/public/public.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ds.oc.lib.oclib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/oclib/private";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +407,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 600FB272123C577D9CEB645B /* Pods-oclib.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -351,9 +422,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = oclib/public/public.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ds.oc.lib.oclib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/oclib/private";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

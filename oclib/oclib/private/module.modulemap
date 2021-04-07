@@ -1,0 +1,8 @@
+
+module oclibsub {
+    /*
+     此处的header需要设置相对路径
+     */
+    header "../public/privateheader.h"
+    export *
+}
